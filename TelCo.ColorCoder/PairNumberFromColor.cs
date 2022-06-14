@@ -13,9 +13,9 @@ namespace TelCo.ColorCoder
         {
             // Find the major color in the array and get the index
             int majorIndex = -1;
-            for (int i = 0; i < ColorMaps.colorMapMajor.Length; i++)
+            for (int i = 0; i < ColorMapping.colorMapMajor.Length; i++)
             {
-                if (ColorMaps.colorMapMajor[i] == pair.majorColor)
+                if (ColorMapping.colorMapMajor[i] == pair.majorColor)
                 {
                     majorIndex = i;
                     break;
@@ -24,9 +24,9 @@ namespace TelCo.ColorCoder
 
             // Find the minor color in the array and get the index
             int minorIndex = -1;
-            for (int i = 0; i < ColorMaps.colorMapMinor.Length; i++)
+            for (int i = 0; i < ColorMapping.colorMapMinor.Length; i++)
             {
-                if (ColorMaps.colorMapMinor[i] == pair.minorColor)
+                if (ColorMapping.colorMapMinor[i] == pair.minorColor)
                 {
                     minorIndex = i;
                     break;
@@ -40,7 +40,7 @@ namespace TelCo.ColorCoder
 
             // Compute pair number and Return  
             // (Note: +1 in compute is because pair number is 1 based, not zero)
-            return (majorIndex * ColorMaps.colorMapMinor.Length) + (minorIndex + 1);
+            return (majorIndex * ColorMapping.colorMapMinor.Length) + (minorIndex + 1);
         }
     }
 }
